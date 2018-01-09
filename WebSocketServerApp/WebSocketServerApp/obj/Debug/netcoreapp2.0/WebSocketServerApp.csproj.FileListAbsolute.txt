@@ -1,0 +1,13 @@
+F:\GitProjects\IdealWebSocket\WebSocketServerApp\WebSocketServerApp\bin\Debug\netcoreapp2.0\WebSocketServerApp.deps.json
+F:\GitProjects\IdealWebSocket\WebSocketServerApp\WebSocketServerApp\bin\Debug\netcoreapp2.0\WebSocketServerApp.runtimeconfig.json
+F:\GitProjects\IdealWebSocket\WebSocketServerApp\WebSocketServerApp\bin\Debug\netcoreapp2.0\WebSocketServerApp.runtimeconfig.dev.json
+F:\GitProjects\IdealWebSocket\WebSocketServerApp\WebSocketServerApp\bin\Debug\netcoreapp2.0\WebSocketServerApp.dll
+F:\GitProjects\IdealWebSocket\WebSocketServerApp\WebSocketServerApp\bin\Debug\netcoreapp2.0\WebSocketServerApp.pdb
+F:\GitProjects\IdealWebSocket\WebSocketServerApp\WebSocketServerApp\bin\Debug\netcoreapp2.0\IdealWebSocket.dll
+F:\GitProjects\IdealWebSocket\WebSocketServerApp\WebSocketServerApp\bin\Debug\netcoreapp2.0\IdealWebSocket.pdb
+F:\GitProjects\IdealWebSocket\WebSocketServerApp\WebSocketServerApp\obj\Debug\netcoreapp2.0\WebSocketServerApp.csprojResolveAssemblyReference.cache
+F:\GitProjects\IdealWebSocket\WebSocketServerApp\WebSocketServerApp\obj\Debug\netcoreapp2.0\WebSocketServerApp.csproj.CoreCompileInputs.cache
+F:\GitProjects\IdealWebSocket\WebSocketServerApp\WebSocketServerApp\obj\Debug\netcoreapp2.0\WebSocketServerApp.AssemblyInfoInputs.cache
+F:\GitProjects\IdealWebSocket\WebSocketServerApp\WebSocketServerApp\obj\Debug\netcoreapp2.0\WebSocketServerApp.AssemblyInfo.cs
+F:\GitProjects\IdealWebSocket\WebSocketServerApp\WebSocketServerApp\obj\Debug\netcoreapp2.0\WebSocketServerApp.dll
+F:\GitProjects\IdealWebSocket\WebSocketServerApp\WebSocketServerApp\obj\Debug\netcoreapp2.0\WebSocketServerApp.pdb

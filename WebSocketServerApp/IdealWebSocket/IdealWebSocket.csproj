@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="obj\Debug\netcoreapp2.0\IdealWebSocket.AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="obj\project.assets.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="obj\Debug\netcoreapp2.0\IdealWebSocket.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\netcoreapp2.0\IdealWebSocket.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\IdealWebSocket.csproj.nuget.cache" />
+    <None Include="obj\IdealWebSocket.csproj.nuget.g.props" />
+    <None Include="obj\IdealWebSocket.csproj.nuget.g.targets" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="bin\Debug\netcoreapp2.0\" />
+  </ItemGroup>
+
+</Project>
