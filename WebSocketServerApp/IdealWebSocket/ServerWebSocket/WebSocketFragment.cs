@@ -76,7 +76,7 @@ namespace IdealWebSocket.ServerWebSocket
         }
 
         /// <summary>
-        /// true if masked.message send from client must be true;message send to client must not be false.该帧是否有掩码
+        /// true if masked.message send from client must be true;message send to client must be false.该帧是否有掩码
         /// </summary>
         public bool IsMasked { get { return (m_fragmentMessage[1] & 0x80)>>7 == 1; } }
 

@@ -6,3 +6,4 @@ F:\GitProjects\IdealWebSocket\WebSocketServerApp\IdealWebSocket\obj\Debug\netcor
 F:\GitProjects\IdealWebSocket\WebSocketServerApp\IdealWebSocket\obj\Debug\netcoreapp2.0\IdealWebSocket.AssemblyInfo.cs
 F:\GitProjects\IdealWebSocket\WebSocketServerApp\IdealWebSocket\obj\Debug\netcoreapp2.0\IdealWebSocket.dll
 F:\GitProjects\IdealWebSocket\WebSocketServerApp\IdealWebSocket\obj\Debug\netcoreapp2.0\IdealWebSocket.pdb
+F:\GitProjects\IdealWebSocket\WebSocketServerApp\IdealWebSocket\obj\Debug\netcoreapp2.0\IdealWebSocket.csprojResolveAssemblyReference.cache

@@ -5,7 +5,7 @@ using System.Text;
 namespace IdealWebSocket.ServerWebSocket
 {
     //define the parse and create method of one entire websocket message
-    //定义用于解析 和 创建 一条websocket消息或者帧的方法,解析和创建是否应该分离?创建借口是考虑之后由于扩展不同的解码方式(配合客户端可以支持的压缩方式)
+    //定义用于解析 和 创建 一条websocket消息或者帧的方法,解析和创建是否应该分离?创建借口是考虑之后用于扩展不同的解码方式(配合客户端可以支持的压缩方式)
     interface IWebSocketMessageHandler
     {
         
