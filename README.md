@@ -4,6 +4,7 @@
 2.How to use IdealWebSocket
   it is really simple to use this library.The server is an abstract object that provided the message service.you need just to implemnet the abstract class WebSocketServer.cs
   and to do the application  logic as showing in the follow.
+        
         public class MyWebSocketServer : IdealWebSocket.ServerWebSocket.WebSocketServer
         {
             public ChatRoom Room = new ChatRoom();
@@ -29,9 +30,11 @@
             }
         }
 then on your program,initial your custom websocketserver object,set the port to listen then open it.
+
         MyWebSocketServer serverSocket = new MyWebSocketServer();
         serverSocket.SetPort(60328);
         serverSocket.Open();
         Console.WriteLine("WebSocketServer Opened");
         Console.ReadKey();
+        
 implement your logic on OnSessionClose,OnSessionConnected,OnSessionNewMessage method.more details can see in the sample WebSocketServerApp
