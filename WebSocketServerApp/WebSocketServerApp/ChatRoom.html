@@ -1,106 +1,72 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"></script>
-    <title></title>
+    <meta charset="UTF-8">
+    <title>聊天室</title>
+    <link rel="stylesheet" href="chartRoom.css">
 </head>
-<body>
-    <div id="error"></div>
-    <div id="enter">
-        <div><span>输入你的名字以加入聊天室:</span><input id="user" /><button id="join">加入</button></div>
+<body style="height: 600px; width: 600px;">
+    <div class="chartRoom">
+        <div class="headPart notLoggedIn">
+            <label>请先登录</label>
+            <button class="logOutButton" onclick="logOutOnClickFunction(this)">登出</button>
+            <button class="logInButton" onclick="logInOnClickFunction(this)">登入</button>
+            <input class="userName" />
+            <span class="error-message"></span>
+        </div>
+        <div class="leftPart">
+            <div class="baseMenu">
+                <div class="partHeader">
+                    <label class="titleLabel">聊天室成员</label>
+                    <ul class="chatroom-list">
+                        <li>邹伟</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="detailMenu">
+                <div class="partHeader">
+                    <label class="titleLabel">成员列表</label>
+                    <ul class="member-list">
+                        <li>tttt</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="rightPart">
+            <div class="partHeader"></div>
+            <div class="contentPart"></div>
+            <div class="footPart">
+                <textarea class="message-panel"></textarea>
+                <button onclick="sendOnClickFunction()">发送(S)</button>
+            </div>
+        </div>
+
+        <script src="chartRoom.js"></script>
+        <script>
+            var ws;
+            document.onkeydown = function (e) {
+                var ev = window.event || e;
+                var code = ev.keyCode || ev.which;
+                if (code == 116) {
+                    ev.keyCode ? ev.keyCode = 0 : ev.which = 0;
+                    cancelBubble = true;
+                    return false;
+                }
+            };
+            document.oncontextmenu = function () { return false };
+            window.onbeforeunload = function () {
+                return "确定离开吗?";
+            }
+            window.onunload = function () {
+                CloseWebSocket();
+            }
+        </script>
     </div>
-    <div id="chatroom" hidden="hidden">
-        <div>WebSocketChatRoom</div>
-        <div><textarea id="info" readonly="readonly" style="width:400px;height:50px;"></textarea></div>
-        <div><textarea id="MessagePanel" readonly="readonly" style="width:1000px;height:500px"></textarea></div>
-        <div><label>Message:</label><textarea id="message" style="width:500px;height:200px"></textarea><span><button id="send">Send</button></span></div>
-        <div><ul id="UserList"></ul></div>
-    </div>
-    <script>
-        document.onkeydown = function (e) {
-            var ev = window.event || e;
-            var code = ev.keyCode || ev.which;
-            if (code == 116) {
-                ev.keyCode ? ev.keyCode = 0 : ev.which = 0;
-                cancelBubble = true;
-                return false;
-            }
-        };
-        document.oncontextmenu = function () { return false };
-
-        var ws;
-        var username;
-        $("#join").click(function () {
-            username = $("#user").val();
-            if (username == "") {
-                $("#error").text("名字不能为空");
-            }
-            else {
-                ws = new WebSocket("ws://192.168.2.84:60328/chat");
-                ws.onopen = function (e) {
-                    $("#enter").hide();
-                    $("#chatroom").show();
-                    $("#info").text("WebSocketChatRoom is connected successfully\r\n");
-                    var timestamp = Math.round(Date.now() / 1000);
-                    var protocol = { CommandType: "Login", UserName: username, Message: "", TimeStamp: timestamp };
-                    var protocolString = JSON.stringify(protocol);
-                    ws.send(protocolString);
-                };
-                ws.onclose = function (e) {
-
-                }
-                ws.onmessage = function (e) {
-                    var message = JSON.parse(e.data);
-                    if (message.CommandType == "Login") {
-                        var prev = $("#info").text();
-                        prev = prev + message.UserName + "加入了聊天室\r\n";
-                        $("#info").text(prev);
-                    }
-                    else if (message.CommandType == "Message") {
-                        var prev = $("#MessagePanel").text();
-                        var date = new Date(message.TimeStamp*1000).toLocaleString();
-                        var me = message.UserName + "     "+ date + "\r\n" + message.Message+"\r\n";
-                        prev = prev + me;
-                        $("#MessagePanel").text(prev);
-                        $("#message").val("");
-                    }
-                    else if (message.CommandType == "Error") {
-                        $("error").text(message.Message);
-                    }
-                }
-                ws.onerror = function (e) {
-
-                }
-
-            }
-        });
-
-        $("#send").click(function (e) {
-            var me = $("#message").val();
-            if (me != "") {
-                var timestamp = Math.round(Date.now() / 1000);
-                var protocol = { CommandType: "Message", UserName: username, Message: me, TimeStamp: timestamp };
-                var protocolString = JSON.stringify(protocol);
-                ws.send(protocolString);
-            }
-            else {
-                $("#error").text("发送消息不能为空");
-            }
-        });
-
-        window.onbeforeunload = function () {
-            return "确定离开吗?";
-        }
-
-        window.onunload = function () {
-            if (ws != undefined) {
-                ws.close();
-            }
-        }
-
-
-
-    </script>
 </body>
 </html>
+
+
+        
+
+
+
