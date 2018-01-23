@@ -1,9 +1,10 @@
 # IdealWebSocket
-1.What is IdealWebsocket
-  IdealWebSocket is a library that help you to build your own WebSocketServer easily.it hide the socket layer details so you can focus on your application. 
-2.How to use IdealWebSocket
-  it is really simple to use this library.The server is an abstract object that provided the message service.you need just to implemnet the abstract class WebSocketServer.cs
-  and to do the application  logic as showing in the follow.
+1.What is IdealWebsocket?
+
+    IdealWebSocket is a library that help you to build your own WebSocketServer easily.it hide the socket layer details so you can focus on your application. 
+2.How to use IdealWebSocket?
+
+    it is really simple to use this library.The server is an abstract object that provided the message service.you need just to implemnet the abstract class WebSocketServer.cs and to finish the application  logic as showing in the follow.
         
         public class MyWebSocketServer : IdealWebSocket.ServerWebSocket.WebSocketServer
         {
